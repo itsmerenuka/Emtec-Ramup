@@ -1,0 +1,38 @@
+<h1> hi </h1>
+<% if @posts.present? %>
+<table>
+  <thead>
+    <tr>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+	<h1>Posts of <%= @category.name %> </h1>
+	  <tbody>
+	    <tr>
+	      <td>Author </td>
+	      <td>Subject</td>
+	      <td>Content</td>
+	    </tr>
+	    <% @posts.each do |post| %>
+	    <tr> 
+	      <td> <%= post.author %> </td>
+	      <td> <%= post.subject %> </td>
+	      
+	      <td> <%= post.content %> </td>
+	    
+	        
+	        </td>
+	      </tr>
+	   <% end %>
+	  </tbody>
+</table>
+<% else %>
+<%= link_to 'Back', posts_path(@posts) %>
+
+<h3> There is no any post related to this category</h3>
+<%= link_to 'Back', posts_path %>
+
+<% end %>
+<!-- <h3> New Comments </h3> -->
+	<%#= render 'comments/form'%>
