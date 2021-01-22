@@ -3,7 +3,7 @@
 <%#= form_tag posts_sorted_data_path, method: "post" do %>
 <div>
 	<%#= select_tag "category_id", options_from_collection_for_select(Category.all, "id", "name", :include_blank => true) %>
-	<%= select_tag 'category_id', options_for_select(Category.all.map {|c| [c.name, c.id]}), include_blank: true, :promt => "Select category" %>
+	<%= select_tag 'category_id', options_for_select(Category.all.map {|c| [c.name, c.id]}), :include_blank => '-- Select One --' %>
 </div>
 	<%= submit_tag "Sort" %>
 

@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
 	 has_many :comments, dependent: :destroy
 	 belongs_to :category
+	 belongs_to :user
 	 validates :category_id, :author, presence: true
 	 validates :subject, presence: true, length: { in: 6..25 }
 

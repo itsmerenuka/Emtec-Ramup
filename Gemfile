@@ -35,8 +35,11 @@ group :development, :test do
   gem "database_cleaner"
   # gem "rspec-rails" 
   gem "factory_bot_rails"
-  gem 'rspec-rails', '~> 4.0.0.beta2'
+  # gem 'rspec-rails', '~> 4.0.0.beta2'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
   gem 'shoulda-matchers', :require => false
+  gem 'faker', '~> 1.6', '>= 1.6.6'
+  gem 'rails-controller-testing'
 end
 
 group :development do

@@ -1,15 +1,14 @@
 require 'rails_helper'
 RSpec.describe Post, :type => :model do
- 	
- 	# subject {Post.new(:author => "ABC", :subject => "Test case", content: => "Hellllooooo")}
- 	subject {
+ 	 	subject {
     Post.new(           author: "Anything",
                         subject: "Lorem ipsum",
-                        content: "hsgdhagshdgashgdhasg",
-                        category_id: 1)
+                        content: "Content for the test",
+                        category_id: 1,
+                        user_id: 1)
   }
 
- 	it "is not valid without a author" do
+ 	  it "is not valid without a author" do
     	subject.author = nil
     	expect(subject).to_not be_valid
   	end

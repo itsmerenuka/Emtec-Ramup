@@ -1,3 +1,9 @@
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 <% if flash[:alert].present?%>
 <%= flash[:alert] %>
@@ -40,4 +46,4 @@
 <% end %>
 <%= link_to 'New Post', new_post_path %>
 <br>
-<%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+<%#= link_to 'Logout', destroy_user_session_path, :method => :delete %>
